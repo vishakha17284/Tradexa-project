@@ -2,13 +2,16 @@
 <div class="padding">
     <input type="text" [(ngModel)]="searchText" placeholder="Search">
 </div>
+<div class="padding">
+    <span>{{userName}}</span>
+</div>
 <table class="padding margin-left">
     <tr *ngFor="let user of users | filter: searchText">
-      <td>{{ user.name }}</td>
-      <td>{{ user.phone }}</td>
-      <td>{{ user.username }}</td>
-      <td>{{ user.email }}</td>
-      <td>{{ user.website }}</td>
+      <td (click)="userName=user.name">{{ user.name }}</td>
+      <td (click)="userName=user.name">{{ user.phone }}</td>
+      <td (click)="userName=user.name">{{ user.username }}</td>
+      <td (click)="userName=user.name">{{ user.email }}</td>
+      <td (click)="userName=user.name">{{ user.website }}</td>
     </tr>
   </table>
   

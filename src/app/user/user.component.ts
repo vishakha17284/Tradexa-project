@@ -10,6 +10,7 @@ import { UserService } from 'src/services/user.service';
 export class UserComponent implements OnInit {
 users:Array<User>=[];
 searchText: string='';
+userName:string='';
 
   constructor(private userService:UserService) { }
 
